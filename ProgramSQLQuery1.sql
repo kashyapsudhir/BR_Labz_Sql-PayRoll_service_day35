@@ -14,7 +14,7 @@ NAME varchar (100),
 SALARY Decimal(10,2),
 Date Date
 );
-*/
+
 
 
 
@@ -30,6 +30,9 @@ Values
 ('Ramesh', '17000.34', '2022-07-07'),
 ('Ramesh', '17000.01', '2022-11-01');
 
+*/
+
+--UC-4
 select * from employeePayroll;
 
 
