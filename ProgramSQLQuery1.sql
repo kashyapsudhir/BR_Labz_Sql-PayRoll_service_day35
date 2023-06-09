@@ -47,7 +47,7 @@ SELECT salary FROM employeePayroll
 WHERE start BETWEEN CAST('2020-01-01'
 AS DATE) AND DATE(NOW());
 
-*/
+
 
 
 --UC-6
@@ -58,6 +58,23 @@ UPDATE employeePayroll SET GENDER='M' WHERE NAME='Mohan'
 UPDATE employeePayroll SET GENDER='M' WHERE NAME='Ramesh'
 UPDATE employeePayroll SET GENDER='M' WHERE NAME='Ramesh'
 SELECT * FROM employeePayroll;
+*/
+
+SELECT SUM(SALARY) FROM employeePayroll
+WHERE GENDER = 'M' GROUP BY GENDER;
+
+SELECT AVG(SALARY) FROM employeePayroll
+WHERE GENDER = 'M' GROUP BY GENDER;
+
+SELECT Count(SALARY) FROM employeePayroll
+WHERE GENDER = 'M' GROUP BY GENDER;
+
+SELECT MIN(SALARY) FROM employeePayroll
+WHERE GENDER = 'M' GROUP BY GENDER;
+
+SELECT MAX(SALARY) FROM employeePayroll
+WHERE GENDER = 'M' GROUP BY GENDER;
+
 
 
 
