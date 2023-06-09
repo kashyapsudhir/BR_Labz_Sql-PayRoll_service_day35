@@ -7,6 +7,9 @@ SHOW DATABASE;
 
 UC-2
 */
+CREATE DATABASE payroll_service;
+USE payroll_service;
+
 Create Table employeePayroll
 (
 ID int identity(1,1) primary key,
@@ -33,13 +36,28 @@ Values
 
 
 --UC-4
---select * from employeePayroll;
+select * from employeePayroll;
 
 --UC-5
-
+/*
 SELECT salary FROM employeePayroll
 where name = 'Ram';
 
 SELECT salary FROM employeePayroll
 WHERE start BETWEEN CAST('2020-01-01'
 AS DATE) AND DATE(NOW());
+
+*/
+
+
+--UC-6
+ALTER TABLE employeePayroll ADD GENDER CHAR(1);
+UPDATE employeePayroll SET GENDER='M' WHERE NAME='Ram'
+UPDATE employeePayroll SET GENDER='M' WHERE NAME='Shyam'
+UPDATE employeePayroll SET GENDER='M' WHERE NAME='Mohan'
+UPDATE employeePayroll SET GENDER='M' WHERE NAME='Ramesh'
+UPDATE employeePayroll SET GENDER='M' WHERE NAME='Ramesh'
+SELECT * FROM employeePayroll;
+
+
+
