@@ -6,7 +6,7 @@ SHOW DATABASE;
 ------------
 
 UC-2
-
+*/
 Create Table employeePayroll
 (
 ID int identity(1,1) primary key,
@@ -30,10 +30,16 @@ Values
 ('Ramesh', '17000.34', '2022-07-07'),
 ('Ramesh', '17000.01', '2022-11-01');
 
-*/
+
 
 --UC-4
-select * from employeePayroll;
+--select * from employeePayroll;
 
+--UC-5
 
+SELECT salary FROM employeePayroll
+where name = 'Ram';
 
+SELECT salary FROM employeePayroll
+WHERE start BETWEEN CAST('2020-01-01'
+AS DATE) AND DATE(NOW());
