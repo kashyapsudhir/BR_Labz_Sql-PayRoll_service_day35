@@ -83,10 +83,10 @@ WHERE GENDER = 'M' GROUP BY GENDER;
 /*
 Alter table employeePayroll add 
 Employee_Phone varchar(15),
-Address varchar(50) default ('india');
+Address varchar(50) default 'india';
 
 
-Alter table employeePayroll add Department varchar(50) null;
+Alter table employeePayroll add Department varchar(50) ;
 
 UPDATE employeePayroll SET Department='Social Science' WHERE Name='Ram'
 UPDATE employeePayroll SET Department='Science' WHERE NAME='Shyam'
@@ -97,7 +97,7 @@ SELECT * FROM employeePayroll;
 
 
 UPDATE employeePayroll SET Address='india' WHERE Gender='M';
-*/
+
 
 --UC-9
 
@@ -108,3 +108,12 @@ alter table employeePayroll add
  IncomeTax decimal(10,2), 
  NetPay decimal(10,2);
  SELECT * FROM employeePayroll;
+
+ */
+
+ Insert into employeePayroll values('Rinki',17000,'2022-09-11','F',876567890,'Lucknow','Hindi',232,232,123,122,1000),
+ ('Sonu',5834,'2022-04-16','M',923128809,'Kanpur','Playing',22,32,13,122,12984),
+ ('Priya',10834,'2021-04-16','F',996528809,'Patna','Science',23,32,83,102,11184),
+ ('Soni',15834,'2020-04-16','F',921234809,'Banglore','Drawing',33,40,56,190,12094);
+ SELECT * FROM employeePayroll;
+ 
