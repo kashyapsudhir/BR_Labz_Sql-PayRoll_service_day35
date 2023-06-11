@@ -80,6 +80,7 @@ WHERE GENDER = 'M' GROUP BY GENDER;
 
 --UC8
 
+/*
 Alter table employeePayroll add 
 Employee_Phone varchar(15),
 Address varchar(50) default ('india');
@@ -96,3 +97,14 @@ SELECT * FROM employeePayroll;
 
 
 UPDATE employeePayroll SET Address='india' WHERE Gender='M';
+*/
+
+--UC-9
+
+alter table employeePayroll add
+ BasicPay decimal(10,2),
+ Deductions decimal(10,2), 
+ TaxablePay decimal(10,2),
+ IncomeTax decimal(10,2), 
+ NetPay decimal(10,2);
+ SELECT * FROM employeePayroll;
