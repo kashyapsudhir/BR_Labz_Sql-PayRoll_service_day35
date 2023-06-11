@@ -116,7 +116,7 @@ alter table employeePayroll add
  ('Priya',10834,'2021-04-16','F',996528809,'Patna','Science',23,32,83,102,11184),
  ('Soni',15834,'2020-04-16','F',921234809,'Banglore','Drawing',33,40,56,190,12094);
  SELECT * FROM employeePayroll;
- */
+ 
 
  --UC11
  create Table EmployeeDepartment
@@ -126,3 +126,12 @@ alter table employeePayroll add
 
  Select * from EmployeeDepartment;
 select * from employeePayroll inner join  EmployeeDepartment on employeePayroll.ID=EmployeeDepartment.DepartmentId;
+*/
+
+
+--UC-12
+select * from employeePayroll inner join  EmployeeDepartment on employeePayroll.ID=EmployeeDepartment.DepartmentId where NAME='Sonu'
+
+
+select * from employeePayroll inner join  EmployeeDepartment on employeePayroll.ID=EmployeeDepartment.DepartmentId WHERE StartDate BETWEEN CAST('2018-01-01'
+AS DATE) AND cast(GETDATE()as date);
